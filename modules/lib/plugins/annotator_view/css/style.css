@@ -1,0 +1,250 @@
+/*
+Annotator view panel Plugin v1.0 (https://https://github.com/albertjuhe/annotator_view/)
+Copyright (C) 2014 Albert Juhé Brugué
+License: https://github.com/albertjuhe/annotator_view/License.rst
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+*/
+
+#search{
+    padding:5px;padding-left:20px;width:100px;border:1px solid #f5f5f5;
+    font-size:10px;color:gray;
+    margin-right:5px;
+    background-image:url('../img/glass.png');
+    background-repeat:no-repeat;
+    background-position:left center;outline:0;
+}
+
+.checkbox-inline {
+    font-size: 0.9em;
+}
+
+ .rotate {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+
+  /* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+
+  /* Should be unset in IE9+ I think. */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  text-align: center;
+  margin: 0 auto;
+}
+
+.annotator-hl-red {
+    background:  #ffcfbf;
+     cursor:pointer;
+}
+
+.annotator-hl-green {
+    background:  #dfffbf;
+     cursor:pointer;
+}
+
+.annotator-hl-yellow {
+    background: rgba(255, 255, 10, 0.3);
+     cursor:pointer;
+}
+
+.annotator-hl-blue {
+	background: #6d9bff;
+	cursor:pointer;
+}
+
+.annotator-hl-grey {
+	background: #c6c6c6;
+	cursor:pointer;
+}
+
+.caixa_color {
+    float:left;
+    width:20px;
+    margin-right:5px;
+}
+
+.anotator_color_box {
+    float:left;
+    height:12px;
+    margin-bottom: 4px;
+    width: 99%;
+}
+
+.annotations-list-uoc {
+    position: fixed;
+    top: 5em;
+    right: 1em;
+    height:95%;
+    z-index: 100;
+
+}
+
+.label-compartit {
+    border: 1px solid #676767;
+    padding: 1px 4px 2px;
+    background-color: #666666;
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 14px;
+    vertical-align: baseline;
+    white-space: nowrap;
+    margin-top: 4px;
+}
+
+.label-counter {
+    background-color: #666666;
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: bold; 
+}
+
+.label-counter-alert {
+    background-color: #B20000;
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: bold; 
+}
+
+.label {
+    padding: 1px 4px 2px;
+    font-weight: bold;
+    line-height: 14px;    
+    vertical-align: baseline;
+    white-space: nowrap;
+    margin-top: 4px;
+    border: 1px solid #676767;
+    color: #333333;
+    font-size: 11px;
+}
+
+.container-anotacions {
+    list-style: none outside none;
+    position:relative;
+    width:100%;
+    padding:10px;
+    margin:0 0 0 -22.5%;
+    float:left;
+    left:22.5%;
+
+}
+
+.square {
+    border: 1px solid #b3b3b3;
+    height:20px;
+}
+
+.annotator-marginviewer-element {
+        border: 1px solid #b3b3b3;
+        margin: 0px;
+        margin-bottom: 10px;
+        width: 227px;        
+        font-size: 12px;
+        cursor:pointer;
+}
+
+.annotator-marginviewer-element:hover {
+        border: 1px solid #666666;
+        background: #ffffff;
+        background-color: #ffffff;
+}
+
+.annotator-marginviewer-header {
+        border-bottom: 1px solid #b3b3b3;
+        background-color: #e6e6e6;
+        height: 26px;
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+      
+}
+
+.annotator-marginviewer-footer {        
+        background-color: #f5f5f5;
+        height: 26px;
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+        padding-top: 0.3em;
+      
+}
+.annotator-marginviewer-highlighted>.annotator-marginviewer-header {
+        background-color: #fbed20;
+}
+.annotator-marginviewer-selected>.annotator-marginviewer-header {
+        background-color: #fbed20;
+}
+
+.annotator-marginviewer-text, .annotator-marginviewer-date {
+    border-bottom: 1px solid #cccccc;
+    background-color: #f5f5f5;
+    padding: 0.5em;
+    font-family: arial;
+    font-size: 11px;
+    line-height: 1.5em;
+  
+      
+}
+
+.panelTextArea {
+    width:96%;
+}
+
+.annotator-marginviewer-quote {
+    border-bottom: 1px solid #cccccc;
+    background-color: #f5f5f5;
+    padding: 0.5em;
+    display: none;
+    font-family: arial;
+    font-size: 11px;
+    line-height: 1.4em;
+    padding-left: 0.6em;
+}
+
+
+.anotador_text {
+    padding-left: 0.1em;
+}
+
+.annotator-marginviewer-highlighted>.annotator-marginviewer-text {
+}
+.annotator-marginviewer-selected>.annotator-marginviewer-text {
+    /* Mozilla: */
+    background: -moz-linear-gradient(top, #fef8cd, #f6edb5);
+    /* Chrome, Safari:*/
+    background: -webkit-gradient(linear,
+                left top, left bottom, from(#fef8cd), to(#f6edb5));
+    /* MSIE */
+    filter: progid:DXImageTransform.Microsoft.Gradient(
+                StartColorStr='#fef8cd', EndColorStr='#f6edb5', GradientType=0);
+}
+
+.annotator-panel-save, .annotator-panel-cancel, .annotator-panel-reset {
+    position: relative;
+    display: inline-block;
+    padding: 0 12px 0 12px;
+    color: #363636;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.75);
+    text-decoration: none;
+    line-height: 20px;
+    font-size: 10px;
+    font-weight: bold;
+    border: 1px solid #a2a2a2;
+    background-color: #d4d4d4;
+    border-radius: 5px;
+    margin-right: 3px;
+}

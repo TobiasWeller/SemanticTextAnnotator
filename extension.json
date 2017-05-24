@@ -1,0 +1,163 @@
+{
+	"name": "SemanticTextAnnotator",
+	"version": "0.5",
+	"author": [
+		"Dominik Martin",
+		"Benjamin Hosenfeld",
+		"Tobias Weller"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:SemanticTextAnnotator",
+	"descriptionmsg": "annotator-desc",
+	"license-name": "MIT",
+	"type": "other",
+	"AutoloadClasses": {
+		"SemanticTextAnnotatorHooks": "SemanticTextAnnotator.hooks.php",
+		"SemanticTextAnnotatorSpecial": "specials/SemanticTextAnnotatorSpecial.php",
+		"SemanticTextAnnotator": "SemanticTextAnnotator.php"
+	},
+	"config": {
+		"BoilerPlateEnableFoo": true
+	},
+	"ExtensionMessagesFiles": {
+		"SemanticTextAnnotatorAlias": "SemanticTextAnnotator.i18n.alias.php"
+	},
+	"Hooks": {
+		"BeforePageDisplay": [
+			"SemanticTextAnnotatorHooks::onBeforePageDisplay"
+		],
+		"CanonicalNamespaces": [
+			"SemanticTextAnnotatorHooks::onCanonicalNamespaces"
+		],
+		"smwInitProperties": [
+			"SemanticTextAnnotatorHooks::smwInitProperties"
+		]
+	},
+	"MessagesDirs": {
+		"SemanticTextAnnotator": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.annotator": {
+			"scripts": [
+				"modules/ext.annotator.js"
+			],
+			"styles": [
+				"modules/ext.annotator.css"
+			],
+			"messages": [
+				"helloworld",
+				"annotate-button-text",
+				"annotate-button-desc",
+				"annotate-icon-desc",
+				"annotate-welcome-message",
+				"annotate-godbye-message"
+			],
+			"dependencies": [
+				"mediawiki.jqueryMsg"
+			]
+		},
+		"ext.annotator.module": {
+			"scripts": [
+				"modules/lib/annotator-1.2.10.js",
+				"modules/lib/featherlight.min.js",
+				"modules/lib/json2.js",
+				"modules/lib/jquery.i18n.min.js",
+				"modules/lib/jquery-dateFormat.min.js",
+				"modules/lib/lunr.min.js",
+				"modules/lib/plugins/annotator.permissions.js",
+				"modules/lib/plugins/annotator_view/categories.js",
+				"modules/lib/plugins/annotator_view/view_annotator.js",
+				"modules/lib/plugins/annotator_view/search.js",
+				"modules/lib/plugins/annotator_view/locale/en/annotator.js",
+				"modules/ext.annotator.module.smwplugin.js",
+				"modules/ext.annotator.repair.js",
+				"modules/ext.annotator.module.api.js",
+				"modules/ext.annotator.module.util.js",
+				"modules/ext.annotator.module.store.js",
+				"modules/ext.annotator.module.js"
+			],
+			"styles": [
+				"modules/lib/annotator-1.2.10.css",
+				"modules/lib/featherlight.min.css",
+				"modules/lib/plugins/annotator_view/css/style.css"
+			],
+			"messages": [
+				"annotation-main-page-description",
+				"annotations",
+				"annotate-repair-notification",
+				"annotate-repair-button-text",
+				"annotate-repair-button-desc"
+			],
+			"dependencies": []
+		},
+		"ext.annotator.repair": {
+			"scripts": [
+				"modules/lib/sweetalert2.min.js"
+			],
+			"styles": [
+				"modules/lib/sweetalert2.min.css",
+				"modules/ext.annotator.repair.css"
+			],
+			"messages": [
+				"repair-welcome-title",
+				"repair-welcome-text",
+				"repair-annotation-info-title",
+				"repair-annotation-info-text",
+				"annotation-article-link",
+				"repair-done-title",
+				"repair-done-text",
+				"repair",
+				"skip",
+				"repair-all-done-title",
+				"repair-all-done-text"
+			]
+		},
+		"ext.annotator.special": {
+			"scripts": [
+				"modules/ext.annotator.module.api.js",
+				"modules/ext.annotator.module.util.js",
+				"modules/ext.annotator.special.js"
+			],
+			"styles": [
+				"modules/lib/bootstrap.css",
+				"modules/ext.annotator.style_special.css",
+				"modules/lib/plugins/annotator_view/css/style.css"
+			],
+			"messages": [
+				"category",
+				"pageforms-form",
+				"color",
+				"add",
+				"delete",
+				"red",
+				"yellow",
+				"green",
+				"blue",
+				"grey"
+			],
+			"dependencies": []
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "SemanticTextAnnotator"
+	},
+	"SpecialPages": {
+		"SemanticTextAnnotator": "SemanticTextAnnotatorSpecial"
+	},
+	"namespaces": [
+		{
+			"id": 248,
+			"constant": "NS_ANNOTATION",
+			"name": "Annotation"
+		},
+		{
+			"id": 249,
+			"constant": "NS_ANNOTATION_TALK",
+			"name": "Annotation_talk"
+		}
+	],
+	"callback": "SemanticTextAnnotatorHooks::afterInit",
+	"manifest_version": 1
+}
