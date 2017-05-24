@@ -9,7 +9,7 @@
 	"url": "https://www.mediawiki.org/wiki/Extension:SemanticTextAnnotator",
 	"descriptionmsg": "annotator-desc",
 	"license-name": "MIT",
-	"type": "other",
+	"type": "semantic",
 	"AutoloadClasses": {
 		"SemanticTextAnnotatorHooks": "SemanticTextAnnotator.hooks.php",
 		"SemanticTextAnnotatorSpecial": "specials/SemanticTextAnnotatorSpecial.php",
