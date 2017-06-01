@@ -1,13 +1,13 @@
 {
-	"name": "SemanticTextAnnotator",
+	"name": "Semantic Text Annotator",
 	"version": "0.5",
 	"author": [
 		"Dominik Martin",
 		"Benjamin Hosenfeld",
-		"Tobias Weller"
+		"[http://www.aifb.kit.edu/web/Tobias_Weller Tobias Weller]"
 	],
-	"url": "https://www.mediawiki.org/wiki/Extension:SemanticTextAnnotator",
-	"descriptionmsg": "annotator-desc",
+	"url": "https://www.mediawiki.org/wiki/Extension:Semantic_Text_Annotator",
+	"descriptionmsg": "sta-desc",
 	"license-name": "MIT",
 	"type": "semantic",
 	"AutoloadClasses": {
@@ -40,18 +40,19 @@
 	"ResourceModules": {
 		"ext.annotator": {
 			"scripts": [
+				"modules/ext.annotator.module.api.js",
 				"modules/ext.annotator.js"
 			],
 			"styles": [
 				"modules/ext.annotator.css"
 			],
 			"messages": [
-				"helloworld",
-				"annotate-button-text",
-				"annotate-button-desc",
-				"annotate-icon-desc",
-				"annotate-welcome-message",
-				"annotate-godbye-message"
+				"sta-button-text",
+				"sta-please-install",
+				"sta-button-desc",
+				"sta-icon-desc",
+				"sta-welcome-message",
+				"sta-godbye-message"
 			],
 			"dependencies": [
 				"mediawiki.jqueryMsg"
@@ -83,11 +84,11 @@
 				"modules/lib/plugins/annotator_view/css/style.css"
 			],
 			"messages": [
-				"annotation-main-page-description",
-				"annotations",
-				"annotate-repair-notification",
-				"annotate-repair-button-text",
-				"annotate-repair-button-desc"
+				"sta-main-page-description",
+				"sta-annotations",
+				"sta-repair-notification",
+				"sta-repair-button-text",
+				"sta-repair-button-desc"
 			],
 			"dependencies": []
 		},
@@ -100,17 +101,17 @@
 				"modules/ext.annotator.repair.css"
 			],
 			"messages": [
-				"repair-welcome-title",
-				"repair-welcome-text",
-				"repair-annotation-info-title",
-				"repair-annotation-info-text",
-				"annotation-article-link",
-				"repair-done-title",
-				"repair-done-text",
-				"repair",
-				"skip",
-				"repair-all-done-title",
-				"repair-all-done-text"
+				"sta-repair-welcome-title",
+				"sta-repair-welcome-text",
+				"sta-repair-info-title",
+				"sta-repair-sta-info-text",
+				"sta-article-link",
+				"sta-repair-done-title",
+				"sta-repair-done-text",
+				"sta-repair",
+				"sta-skip",
+				"sta-repair-all-done-title",
+				"sta-repair-all-done-text"
 			]
 		},
 		"ext.annotator.special": {
@@ -125,16 +126,16 @@
 				"modules/lib/plugins/annotator_view/css/style.css"
 			],
 			"messages": [
-				"category",
-				"pageforms-form",
-				"color",
-				"add",
-				"delete",
-				"red",
-				"yellow",
-				"green",
-				"blue",
-				"grey"
+				"sta-category",
+				"sta-pageforms-form",
+				"sta-color",
+				"sta-add",
+				"sta-delete",
+				"sta-red",
+				"sta-yellow",
+				"sta-green",
+				"sta-blue",
+				"sta-grey"
 			],
 			"dependencies": []
 		}

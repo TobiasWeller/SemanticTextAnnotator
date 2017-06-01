@@ -1,6 +1,6 @@
 /**
  * Annotator Extension Module Script
- * Author: DominikMartin, BenjaminHosenfeld
+ * Author: DominikMartin, BenjaminHosenfeld, Tobias Weller
  */
 
 ( function () {
@@ -20,7 +20,7 @@
 			api.getAllCategoryPageForms(function(results) {
 				categories = new Object();
 				Object.keys(results).forEach(function(prop) {
-					categoriesMap[results[prop].printouts['SA Category Name'][0]] = results[prop].fulltext;
+					categoriesMap[results[prop].printouts['SA Category Name'][0]] = results[prop].fulltext.split('#')[0];
 					categories[results[prop].printouts['SA Category Name'][0]] = 'annotator-hl-'+results[prop].printouts['SA Category Color'][0];
 				});
 				initAnnotator();

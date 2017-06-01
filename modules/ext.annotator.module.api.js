@@ -57,7 +57,6 @@ var api = {
     existPage: function (pagename,callback) {
         var url = mw.config.get('wgScriptPath')+'/api.php?action=query&titles=' + pagename + '&format=json';
         $.getJSON(url, function(json) {
-          debugger;
             pid = Object.keys(json.query.pages)[0];
             if(pid != -1){
                 callback(true);

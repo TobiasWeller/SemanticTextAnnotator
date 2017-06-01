@@ -28,9 +28,9 @@ Annotator.Plugin.MediaWiki = function (element) {
 
         api.getPageContent('Annotation:'+mw.config.get('wgPageName'), function (content) {
             if(content.length < 1){
-                var page_content = mw.msg('annotation-main-page-description')
+                var page_content = mw.msg('sta-main-page-description')
                     +' [['+mw.config.get('wgPageName')+']].\n\n'
-                    +'=='+mw.msg('annotations')+'==\n'
+                    +'=='+mw.msg('sta-annotations')+'==\n'
                     +'{{#ask:\n'
                     +'[[Category:TextAnnotation]]\n'
                     +'[[Annotation of::{{PAGENAME}}]]\n'
@@ -59,12 +59,15 @@ Annotator.Plugin.MediaWiki = function (element) {
         api.existPage('Annotation:'+mw.config.get('wgPageName')+'/'+ annotation.id, function (content) {
             if(!content){
               //Seite existiert nicht
-              this.annotator.deleteAnnotation(annotation);
+              plugin.deleteAnnotationWiki(annotation);
             }
         });
       }
     };
 
+    plugin.deleteAnnotationWiki = function (annotation) {
+        this.annotator.deleteAnnotation(annotation);
+    }
     plugin.loadAnnotationsFromLocalVar = function () {
         console.info("Load existing annotations...");
         console.info("checking for moved annotations...");
@@ -115,25 +118,12 @@ Annotator.Plugin.MediaWiki = function (element) {
         iframeContent.find("#content").css("border", "none");
         iframeContent.find("#content").css("margin", 0);
 
-        var annotationOfField = iframeContent.find('input[name="TextAnnotation[AnnotationOf]"]');
-        annotationOfField.val(mw.config.get('wgPageName'));
-        annotationOfField.closest('tr').css('display', 'none');
+        //Delete Table if exist
+        iframeContent.find('input[name="ImageAnnotation[AnnotationOf]"]').closest('table').remove();
 
-        var annotationCommentField = iframeContent.find('input[name="TextAnnotation[AnnotationComment]"]');
-        annotationCommentField.val(annotation.text);
-        annotationCommentField.closest('tr').css('display', 'none');
-
-        var lastModificationDateField = iframeContent.find('input[name="TextAnnotation[LastModificationDate]"]');
-        lastModificationDateField.val(util.formatDate(mw.now()));
-        lastModificationDateField.closest('tr').css('display', 'none');
-
-        var lastModificationUserField = iframeContent.find('input[name="TextAnnotation[LastModificationUser]"]');
-        lastModificationUserField.val('User:'+mw.user.getName());
-        lastModificationUserField.closest('tr').css('display', 'none');
-
-        var annotationMetadataField = iframeContent.find('input[name="TextAnnotation[AnnotationMetadata]"]');
-        annotationMetadataField.val(util.fromJsonToEscaped(annotation));
-        annotationMetadataField.closest('tr').css('display', 'none');
+        //Hide Content
+        plugin.hideContent(iframeContent, annotation, "TextAnnotation");
+        
 
         // auto scale popup
         $("iframe").width(iframeContent.find("#content").width());
@@ -149,6 +139,28 @@ Annotator.Plugin.MediaWiki = function (element) {
         });
     };
 
+    plugin.hideContent = function(iframeContent, annotation, annotator) {
+        var annotationOfField = iframeContent.find('input[name="' + annotator + '[AnnotationOf]"]');
+        annotationOfField.val(mw.config.get('wgPageName'));
+        annotationOfField.closest('tr').css('display', 'none');
+
+        var annotationCommentField = iframeContent.find('input[name="' + annotator + '[AnnotationComment]"]');
+        annotationCommentField.val(annotation.text);
+        annotationCommentField.closest('tr').css('display', 'none');
+
+        var lastModificationDateField = iframeContent.find('input[name="' + annotator + '[LastModificationDate]"]');
+        lastModificationDateField.val(util.formatDate(mw.now()));
+        lastModificationDateField.closest('tr').css('display', 'none');
+
+        var lastModificationUserField = iframeContent.find('input[name="' + annotator + '[LastModificationUser]"]');
+        lastModificationUserField.val('User:'+mw.user.getName());
+        lastModificationUserField.closest('tr').css('display', 'none');
+
+        var annotationMetadataField = iframeContent.find('input[name="' + annotator + '[AnnotationMetadata]"]');
+        annotationMetadataField.val(util.fromJsonToEscaped(annotation));
+        annotationMetadataField.closest('tr').css('display', 'none');
+    };
+
     plugin.checkForMovedAnnotations = function (annotations) {
         var rootNode = document.getElementsByClassName("annotator-wrapper")[0];
         var annotator = $('#content').annotator().annotator().data('annotator');
@@ -161,8 +173,8 @@ Annotator.Plugin.MediaWiki = function (element) {
         });
 
         if(annotationsStore.removedAnnotations.length > 0){
-            mw.notify( mw.msg('annotate-repair-notification'), { autoHide: false } );
-            $('#p-views>ul').append('<li id="ca-annotate-repair"><span><a href="#" title="'+mw.msg('annotate-repair-button-desc')+'" accesskey="a">'+mw.msg('annotate-repair-button-text')+'</a><i class="fa fa-check" aria-hidden="true"></i></span></li>');
+            mw.notify( mw.msg('sta-repair-notification'), { autoHide: false } );
+            $('#p-views>ul').append('<li id="ca-annotate-repair"><span><a href="#" title="'+mw.msg('sta-repair-button-desc')+'" accesskey="a">'+mw.msg('sta-repair-button-text')+'</a><i class="fa fa-check" aria-hidden="true"></i></span></li>');
             $('#ca-annotate-repair').click(function() {
                 mw.loader.using( 'ext.annotator.repair' ).then( function () {
                     $( '#ca-annotate-repair' ).addClass( 'selected' );

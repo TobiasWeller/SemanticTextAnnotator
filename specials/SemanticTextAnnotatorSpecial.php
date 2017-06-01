@@ -11,6 +11,19 @@ class SemanticTextAnnotatorSpecial extends SpecialPage {
 		parent::__construct( 'SemanticTextAnnotator' );
 	}
 
+
+    /**
+     * Override the parent to set where the special page appears on Special:SpecialPages
+     * 'other' is the default. If that's what you want, you do not need to override.
+     * Specify 'media' to use the <code>specialpages-group-media</code> system interface message, which translates to 'Media reports and uploads' in English;
+     * 
+     * @return string
+     */
+    function getGroupName() {
+        return 'annotation';
+    }
+
+
 	/**
 	 * Show the page to the user
 	 *
@@ -21,27 +34,27 @@ class SemanticTextAnnotatorSpecial extends SpecialPage {
 
 		$out = $this->getOutput();
 
-		$out->setPageTitle( $this->msg( 'annotator-special-title' ) );
+		$out->setPageTitle( $this->msg( 'sta-special-title' ) );
 
-		$out->addWikiMsg( 'annotator-special-intro' );
+		$out->addWikiMsg( 'sta-special-intro' );
 
         $installForm = HTMLForm::factory( 'ooui', [], $this->getContext(), 'install-form' );
 
         if( !self::pageExists( 'Form:TextAnnotation' ) )
         {
-            $out->addWikiText( '== '.$this->msg( 'install' ).' ==' );
-            $out->addWikiMsg( 'install-description' );
+            $out->addWikiText( '== '.$this->msg( 'sta-install' ).' ==' );
+            $out->addWikiMsg( 'sta-install-description' );
 
-            $installForm->setSubmitTextMsg( 'install-button-submit' );
+            $installForm->setSubmitTextMsg( 'sta-install-button-submit' );
             $installForm->setSubmitCallback( [ 'SemanticTextAnnotatorSpecial', 'install' ] );
 
             $installForm->show();
         }
         else
         {
-            $out->addWikiText( '== '.$this->msg( 'category-pageform-assignment' ).' ==' );
-            $out->addWikiMsg( 'category-pageform-assignment-description' );
-            $out->addHTML( '<div id="sa-categories" class="oo-ui-panelLayout-padded oo-ui-panelLayout-framed">'.$this->msg( 'loading' ).'</div>' );
+            $out->addWikiText( '== '.$this->msg( 'sta-category-pageform-assignment' ).' ==' );
+            $out->addWikiMsg( 'sta-category-pageform-assignment-description' );
+            $out->addHTML( '<div id="sa-categories" class="oo-ui-panelLayout-padded oo-ui-panelLayout-framed">'.$this->msg( 'sta-loading' ).'</div>' );
 
         }
 
@@ -68,7 +81,7 @@ class SemanticTextAnnotatorSpecial extends SpecialPage {
 
         // # Create Category
         // - Annotation
-        $text = 'This is the Annotation category used by Semantic Text Annotator.';
+        $text = 'This is the Annotation category used by the Annotator Tools.';
         self::editPage( 'Category:Annotation', $text );
         //   - TextAnnotation (subcategory)
         $text = 'This is the TextAnnotation category used by Semantic Text Annotator.'."\n\n";
@@ -140,13 +153,13 @@ class SemanticTextAnnotatorSpecial extends SpecialPage {
         $text .= '</includeonly>';
         self::editPage( 'Form:TextAnnotation', $text );
 
-        return wfMessage( 'install-success' )->inContentLanguage()->text();
+        return wfMessage( 'sta-install-success' )->inContentLanguage()->text();
     }
 
     static function editPage( $pagename, $text ) {
         $title = Title::newFromText($pagename);
         $wikiPage = new WikiPage( $title );
-        $summary = wfMessage( 'autogenerate-summary' )->inContentLanguage()->text();
+        $summary = wfMessage( 'sta-autogenerate-summary' )->inContentLanguage()->text();
         $content = ContentHandler::makeContent( $text, $title );
         $wikiPage->doEditContent( $content, $summary, 0 );
 
