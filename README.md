@@ -1,6 +1,6 @@
-<a href="https://www.mediawiki.org/wiki/Extension:Semantic_Text_Annotator">
-    <img src="https://cloud.githubusercontent.com/assets/11618221/26683982/0109a468-46e6-11e7-902e-c851126f082c.png" alt="Semantic Text Annotator" title="Semantic Text Annotator" align="center" height="200"/>
-    </a></br>
+<img src="https://cloud.githubusercontent.com/assets/11618221/26683982/0109a468-46e6-11e7-902e-c851126f082c.png" alt="Semantic Text Annotator" title="Semantic Text Annotator" align="middle" height="200"/>
+
+
 Semantic Text Annotator
 ======================
 
