@@ -1,5 +1,6 @@
-![Semantic Text Annotator](https://upload.wikimedia.org/wikipedia/mediawiki/1/11/Annotate_Comment.png)
-
+<a href="https://www.mediawiki.org/wiki/Extension:Semantic_Text_Annotator">
+    <img src="https://cloud.githubusercontent.com/assets/11618221/26683982/0109a468-46e6-11e7-902e-c851126f082c.png" alt="Semantic Text Annotator" title="Semantic Text Annotator" align="center" height="200"/>
+    </a></br>
 Semantic Text Annotator
 ======================
 
@@ -39,7 +40,7 @@ Click [here](https://sandbox.semantic-mediawiki.org/wiki/Main_Page) for a Demo.
 * Go to Special Pages and Click on *Semantic Text Annotator* under the Group *Annotation*
 * Click on the Install button to setup Semantic Image Annotator and refresh the Special Page
 * You can now Link PageForms to Annotation-Categories by using the Table on Special Page</br>
-    <img src="https://upload.wikimedia.org/wikipedia/mediawiki/7/7e/Annotate_SpecialPageMain.png" alt="Semantic Text Annotator" title="Semantic Text Annotator" align="center" height=""/>
+    ![Special Page](https://cloud.githubusercontent.com/assets/11618221/26683983/010cc63e-46e6-11e7-99c6-af79548390df.png)
 
 
 ## Usage
@@ -51,12 +52,12 @@ Click [here](https://sandbox.semantic-mediawiki.org/wiki/Main_Page) for a Demo.
 * You can enter a Comment to the Annotation and select an Annotation-Category (Linked by using the Special Page)
 * A popup appears to enter additional information, based on the selected PageForm
 * Click on save to store the annotation</br>
-    <img src="https://upload.wikimedia.org/wikipedia/mediawiki/4/44/Annotate_Sidebar.png" alt="Semantic Text Annotator" title="Semantic Text Annotator" align="center" height=""/>
+     ![Create Annotations](https://cloud.githubusercontent.com/assets/11618221/26683984/012deda0-46e6-11e7-9294-819a860673ee.png)
 
 
 ### Edit Annotations
 * Mouseover an annotation. A popup appears. Click on the Edit button.</br>
-    <img src="https://upload.wikimedia.org/wikipedia/mediawiki/1/1d/Annotate_Mouseover_EditButtons.png" alt="Semantic Text Annotator" title="Semantic Text Annotator" align="center" height=""/>
+    ![Create Annotations](https://cloud.githubusercontent.com/assets/11618221/26683985/012e2a2c-46e6-11e7-965a-79dbddc1392d.png)
 
 
 ### Delete Annotations
@@ -66,8 +67,8 @@ Click [here](https://sandbox.semantic-mediawiki.org/wiki/Main_Page) for a Demo.
 ### Query Annotations
 * The annotations are stored in a structured way.
 * Every annotated Wikipage has its own overview page (Annotation:*PAGENAME*) which lists all annotations.
-* Teh following figure shows the query for listing all Pages for a certain Wiki page. </br>
-    <img src="https://upload.wikimedia.org/wikipedia/mediawiki/d/d5/Annotate_OverviewPageSyntax.png" alt="Semantic Text Annotator" title="Semantic Text Annotator" align="center" height="400"/>
+* The following figure shows the query for listing all Pages for a certain Wiki page. </br>
+<img src="https://cloud.githubusercontent.com/assets/11618221/26683981/0107dbf6-46e6-11e7-8c94-af9db6303d13.png" alt="Query Annotations" title="Query Annotations" align="center" height="300"/>
 
 
 ## License
