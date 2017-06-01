@@ -1,4 +1,4 @@
-<a href="https://aimeos.org/">
+<a href="https://www.mediawiki.org/wiki/Extension:Semantic_Text_Annotator">
     <img src="https://upload.wikimedia.org/wikipedia/mediawiki/1/11/Annotate_Comment.png" alt="Semantic Text Annotator" title="Semantic Text Annotator" align="center"/>
 </a>
 
@@ -48,9 +48,7 @@ Click [here](https://sandbox.semantic-mediawiki.org/wiki/Main_Page) for a Demo.
 * Go to Special Pages and Click on *Semantic Text Annotator* under the Group *Annotation*
 * Click on the Install button to setup Semantic Image Annotator and refresh the Special Page
 * You can now Link PageForms to Annotation-Categories by using the Table on Special Page</br>
-<a href="https://aimeos.org/">
     <img src="https://upload.wikimedia.org/wikipedia/mediawiki/7/7e/Annotate_SpecialPageMain.png" alt="Semantic Text Annotator" title="Semantic Text Annotator" align="center" height=""/>
-</a>
 
 
 
@@ -65,16 +63,12 @@ Click [here](https://sandbox.semantic-mediawiki.org/wiki/Main_Page) for a Demo.
 * You can enter a Comment to the Annotation and select an Annotation-Category (Linked by using the Special Page)
 * A popup appears to enter additional information, based on the selected PageForm
 * Click on save to store the annotation</br>
-<a href="https://aimeos.org/">
     <img src="https://upload.wikimedia.org/wikipedia/mediawiki/4/44/Annotate_Sidebar.png" alt="Semantic Text Annotator" title="Semantic Text Annotator" align="center" height=""/>
-</a>
 
 
 ### Edit Annotations
 * Mouseover an annotation. A popup appears. Click on the Edit button.</br>
-<a href="https://aimeos.org/">
     <img src="https://upload.wikimedia.org/wikipedia/mediawiki/1/1d/Annotate_Mouseover_EditButtons.png" alt="Semantic Text Annotator" title="Semantic Text Annotator" align="center" height=""/>
-</a>
 
 
 ### Delete Annotations
@@ -85,9 +79,7 @@ Click [here](https://sandbox.semantic-mediawiki.org/wiki/Main_Page) for a Demo.
 * The annotations are stored in a structured way.
 * Every annotated Wikipage has its own overview page (Annotation:*PAGENAME*) which lists all annotations.
 * Teh following figure shows the query for listing all Pages for a certain Wiki page. </br>
-<a href="https://aimeos.org/">
     <img src="https://upload.wikimedia.org/wikipedia/mediawiki/d/d5/Annotate_OverviewPageSyntax.png" alt="Semantic Text Annotator" title="Semantic Text Annotator" align="center" height="400"/>
-</a>
 
 
 ## License
