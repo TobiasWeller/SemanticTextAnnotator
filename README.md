@@ -1,6 +1,4 @@
-<a href="https://www.mediawiki.org/wiki/Extension:Semantic_Text_Annotator">
-    ![Semantic Text Annotator](https://upload.wikimedia.org/wikipedia/mediawiki/1/11/Annotate_Comment.png)
-</a>
+![Semantic Text Annotator](https://upload.wikimedia.org/wikipedia/mediawiki/1/11/Annotate_Comment.png)
 
 Semantic Text Annotator
 ======================
