@@ -1,5 +1,5 @@
 <a href="https://www.mediawiki.org/wiki/Extension:Semantic_Text_Annotator">
-    <img src="https://upload.wikimedia.org/wikipedia/mediawiki/1/11/Annotate_Comment.png" alt="Semantic Text Annotator" title="Semantic Text Annotator" align="center"/>
+    ![Semantic Text Annotator](https://upload.wikimedia.org/wikipedia/mediawiki/1/11/Annotate_Comment.png)
 </a>
 
 Semantic Text Annotator
@@ -11,23 +11,16 @@ Click [here](https://sandbox.semantic-mediawiki.org/wiki/Main_Page) for a Demo.
 
 ## Table of content
 - [Prerequisites](#prerequisites)
-
 - [Installation](#installation)
-
 - [Annotator setup](#annotator-setup)
-
 - [Usage](#usage)
     - [Create Annotations](#create-annotations)
     - [Edit Annotations](#edit-annotations)
     - [Delete Annotations](#delete-annotations)
     - [Query Annotations](#query-annotations)
-
 - [License](#license)
-
 - [Acknowledgements](#acknowledgements)
-
 - [Links](#links)
-
 - [Related Extensions](#related-extensions)
 
 ## Prerequisites
@@ -49,9 +42,6 @@ Click [here](https://sandbox.semantic-mediawiki.org/wiki/Main_Page) for a Demo.
 * Click on the Install button to setup Semantic Image Annotator and refresh the Special Page
 * You can now Link PageForms to Annotation-Categories by using the Table on Special Page</br>
     <img src="https://upload.wikimedia.org/wikipedia/mediawiki/7/7e/Annotate_SpecialPageMain.png" alt="Semantic Text Annotator" title="Semantic Text Annotator" align="center" height=""/>
-
-
-
 
 
 ## Usage
