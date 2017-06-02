@@ -6,7 +6,7 @@ Semantic Text Annotator
 
 The repository contains the Semantic Text Annotator extension for semantic MediaWiki. The extension provides a plugin for capturing Text Annotations of wiki articles.
 
-Click [here](https://sandbox.semantic-mediawiki.org/wiki/Main_Page) for a Demo.
+Click [here](https://sandbox.semantic-mediawiki.org/wiki/HaloTestEvent) for a Demo.
 
 ## Table of content
 - [Prerequisites](#prerequisites)
