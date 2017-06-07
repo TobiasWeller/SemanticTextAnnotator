@@ -38,6 +38,7 @@ Click [here](https://sandbox.semantic-mediawiki.org/wiki/HaloTestEvent) for a De
 
 ## Annotator Setup
 * Go to Special Pages and Click on *Semantic Text Annotator* under the Group *Annotation*
+     * *Remark: Only Users with sysops rights are allowed to access the page.*
 * Click on the Install button to setup Semantic Image Annotator and refresh the Special Page
 * You can now Link PageForms to Annotation-Categories by using the Table on Special Page</br>
     ![Special Page](https://cloud.githubusercontent.com/assets/11618221/26683983/010cc63e-46e6-11e7-99c6-af79548390df.png)
@@ -49,6 +50,7 @@ Click [here](https://sandbox.semantic-mediawiki.org/wiki/HaloTestEvent) for a De
 * Go to a Wiki Article (In the NameSpace 0)
 * On the top appears the *Annotate* Button. Click on it to start the Annotation Mode
 * Afterwards you can select a text phrase and click on the popup Button
+     * *Remark: If the user has no permission to create/edit pages, then no popup appears.*
 * You can enter a Comment to the Annotation and select an Annotation-Category (Linked by using the Special Page)
 * A popup appears to enter additional information, based on the selected PageForm
 * Click on save to store the annotation</br>
