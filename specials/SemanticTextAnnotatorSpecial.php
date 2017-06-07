@@ -8,7 +8,7 @@
 
 class SemanticTextAnnotatorSpecial extends SpecialPage {
 	public function __construct() {
-		parent::__construct( 'SemanticTextAnnotator' );
+		parent::__construct( 'SemanticTextAnnotator', 'editinterface' ); //restrict to sysops
 	}
 
 
