@@ -4,6 +4,16 @@ Annotator.Plugin.MediaWiki = function (element) {
     plugin.pluginInit = function () {
         /* Load existing annotations */
         plugin.loadAnnotationsFromLocalVar();
+        
+        //Delete Editor, if not editable
+        debugger;
+        if (!$( "#ca-edit" ).length) {
+            //Delete annotator-editor 
+            $( ".annotator-editor" ).remove();
+            //Delete annotator-adder
+            $( ".annotator-adder" ).remove();
+        }
+        
 
         this.annotator
             .subscribe("beforeAnnotationCreated", function (annotation) {
@@ -15,6 +25,12 @@ Annotator.Plugin.MediaWiki = function (element) {
             })
             .subscribe("annotationUpdated", function (annotation) {
                 plugin.afterUpdate(annotation);
+            })
+            .subscribe("annotationViewerShown", function (editor,annotation) {
+                //Delete annotator-controls
+                if (!$( "#ca-edit" ).length) {
+                    $( ".annotator-controls" ).remove();
+                }
             })
             .subscribe("annotationDeleted", function (annotation) {
                 var postDeleteUrl = mw.config.get('wgScriptPath')+'/api.php?action=delete&title=Annotation:'
