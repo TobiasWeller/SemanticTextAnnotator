@@ -6,7 +6,6 @@ Annotator.Plugin.MediaWiki = function (element) {
         plugin.loadAnnotationsFromLocalVar();
         
         //Delete Editor, if not editable
-        debugger;
         if (!$( "#ca-edit" ).length) {
             //Delete annotator-editor 
             $( ".annotator-editor" ).remove();

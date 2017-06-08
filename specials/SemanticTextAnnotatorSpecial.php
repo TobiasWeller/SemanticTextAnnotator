@@ -56,6 +56,17 @@ class SemanticTextAnnotatorSpecial extends SpecialPage {
             $out->addWikiMsg( 'sta-category-pageform-assignment-description' );
             $out->addHTML( '<div id="sa-categories" class="oo-ui-panelLayout-padded oo-ui-panelLayout-framed">'.$this->msg( 'sta-loading' ).'</div>' );
 
+            $out->addWikiText( '== '.$this->msg( 'sta-reinstall-header' ).' ==' );
+            $btn = new OOUI\ButtonWidget( array(
+                'infusable' => true,
+                'id' => 'reinstall-btn',
+                'label' => ''.$this->msg( 'sta-reinstall-header' ).'',
+            ) );
+
+            
+            $out->addWikiText( ''.$this->msg( 'sta-reinstall-text' ).'' );
+            $out->addHTML($btn);
+
         }
 
         $out->addModules( 'ext.annotator.special' );

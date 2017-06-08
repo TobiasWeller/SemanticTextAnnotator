@@ -1,6 +1,6 @@
 {
 	"name": "Semantic Text Annotator",
-	"version": "0.7.1",
+	"version": "0.7.2",
 	"author": [
 		"Dominik Martin",
 		"Benjamin Hosenfeld",
@@ -118,12 +118,15 @@
 			"scripts": [
 				"modules/ext.annotator.module.api.js",
 				"modules/ext.annotator.module.util.js",
-				"modules/ext.annotator.special.js"
+				"modules/ext.annotator.special.js",
+				"modules/ext.annotator.reinstall.js",
+				"modules/lib/sweetalert2.min.js"
 			],
 			"styles": [
 				"modules/lib/bootstrap.css",
 				"modules/ext.annotator.style_special.css",
-				"modules/lib/plugins/annotator_view/css/style.css"
+				"modules/lib/plugins/annotator_view/css/style.css",
+				"modules/lib/sweetalert2.min.css"
 			],
 			"messages": [
 				"sta-category",
@@ -135,7 +138,10 @@
 				"sta-yellow",
 				"sta-green",
 				"sta-blue",
-				"sta-grey"
+				"sta-grey",
+				"sta-reinstall-header",
+				"sta-request-reinstall",
+				"sta-confirm-reinstall"
 			],
 			"dependencies": []
 		}

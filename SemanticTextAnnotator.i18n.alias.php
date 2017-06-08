@@ -1,19 +1,23 @@
 <?php
 /**
- * Aliases for special pages of the Annotator extension
+ * Aliases Semantic Text Annotator
  *
  * @file
  * @ingroup Extensions
  */
 
-$specialPageAliases = [];
+$specialPageAliases = array();
 
-/** English (English) */
-$specialPageAliases['en'] = [
-	'Annotator' => [ 'Annotator' ],
-];
+/** English
+ * @author Tobias Weller
+ */
+$specialPageAliases['en'] = array(
+	'SemanticTextAnnotator' => array( 'SemanticTextAnnotator', 'Semantic Text Annotator' ),
+);
 
-/** Deutsch (Deutsch) */
-$specialPageAliases['de'] = [
-	'Annotator' => [ 'Annotator' ],
-];
+/** Deutsch
+ * @author Tobias Weller
+ */
+$specialPageAliases['de'] = array(
+	'SemanticTextAnnotator' => array( 'SemanticTextAnnotator', 'Semantic Text Annotator' ),
+);
