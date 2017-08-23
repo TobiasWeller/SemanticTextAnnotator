@@ -8,7 +8,7 @@ var api = {
     },
 
     getAllPageFormPages: function (callback) {
-        var url = mw.config.get('wgScriptPath')+'/api.php?action=query&list=allpages&apnamespace=106&format=json';
+        var url = mw.config.get('wgScriptPath')+'/api.php?action=query&list=allpages&apnamespace=106&aplimit=1000&format=json';
         $.getJSON(url, function(json) {
             callback(json.query.allpages);
         });
